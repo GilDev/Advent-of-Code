@@ -1,10 +1,12 @@
+import os
+day = int(os.path.basename(__file__)[3:5])
+
+with open(f"2025/inputs/day{day:02}.txt") as f:
+	ranges = f.read().split(',')
+
 # Part 1
 
 total = 0
-ranges = []
-
-with open('2025/inputs/day02.txt') as f:
-	ranges = f.read().split(',')
 
 for current_range in ranges:
 	first, last = [int(i) for i in current_range.split('-')]
@@ -19,10 +21,6 @@ print(f"Part 1: {total}")
 # Part 2
 
 total = 0
-ranges = []
-
-with open('2025/inputs/day02.txt') as f:
-	ranges = f.read().split(',')
 
 for current_range in ranges:
 	first, last = [int(i) for i in current_range.split('-')]

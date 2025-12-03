@@ -1,9 +1,12 @@
+import os
+day = int(os.path.basename(__file__)[3:5])
+
+with open(f"2025/inputs/day{day:02}.txt") as f:
+    banks = f.read().split("\n")
+
 # Part 1
 
 total = 0
-
-with open("2025/inputs/day03.txt") as f:
-    banks = f.read().split("\n")
 
 for bank in banks:
     first = max(bank[:-1])
@@ -26,9 +29,6 @@ def find_max_joltage(bank, length):
     return int(joltage)
 
 total = 0
-
-with open("2025/inputs/day03.txt") as f:
-    banks = f.read().split("\n")
 
 for bank in banks:
     total += find_max_joltage(bank, 12)
