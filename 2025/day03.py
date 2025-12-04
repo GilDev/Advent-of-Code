@@ -1,4 +1,5 @@
 import os
+
 day = int(os.path.basename(__file__)[3:5])
 
 with open(f"2025/inputs/day{day:02}.txt") as f:
@@ -18,15 +19,17 @@ print(f"Part 1: {total}")
 
 # Part 2
 
+
 def find_max_joltage(bank, length):
     joltage = ""
     while len(joltage) < length:
         # Find next max digit in bank while keeping the rest to fill `joltage` up to `length`
-        max_digit = max(bank[:len(bank) - length + len(joltage) + 1])
+        max_digit = max(bank[: len(bank) - length + len(joltage) + 1])
         joltage += max_digit
-        bank = bank[bank.index(max_digit)+1:]
+        bank = bank[bank.index(max_digit) + 1 :]
 
     return int(joltage)
+
 
 total = 0
 
