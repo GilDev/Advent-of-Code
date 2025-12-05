@@ -10,7 +10,9 @@ ingredients = ingredients.split("\n")
 
 ranges = [(int(i.split("-")[0]), int(i.split("-")[1])) for i in ranges]
 
-# Again, improvements are possible on list manipulations, but I find it pretty readable this way
+# I find it pretty readable this way, but again this is not optimal and being
+# comfortable with Python's syntax helps a lot in optimizing everything:
+# https://www.reddit.com/r/adventofcode/comments/1pemdwd/comment/nsdo8ja/
 
 # Part 1
 
